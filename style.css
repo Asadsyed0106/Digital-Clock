@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding: 0;
+   
+    box-sizing: border-box;
+}
+body{
+    background-color: rosybrown;
+}
+main{
+    height: 100%;
+    margin-top: 20%;
+    margin-left: 10%;
+    
+    
+}
+
+.container{
+    background-color: #ffffc7;
+     height: 10vh;
+     width: 70vh;
+     border: 2px solid black;
+     margin: 20px 30%;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     color:   black;
+
+}
+.year , .month,.hour,.date,.minute{
+    height: 10vh;
+    width: 10vh;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ 
