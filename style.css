@@ -1,39 +1,92 @@
 *{
     margin:0;
     padding: 0;
+    font-family: sans-serif;
    
     box-sizing: border-box;
 }
-body{
-    background-color: rosybrown;
+.hero{
+    width: 100%;
+    height: 100vh;;
+    background: linear-gradient(45deg, #08001f  , #301973);
+    color: #fff;
+    position: relative;
 }
-main{
-    height: 100%;
-    margin-top: 20%;
-    margin-left: 10%;
-    
-    
-}
-
 .container{
-    background-color: #ffffc7;
-     height: 10vh;
-     width: 70vh;
-     border: 2px solid black;
-     margin: 20px 30%;
-     display: flex;
-     justify-content: space-around;
-     align-items: center;
-     color:   black;
-
+    width: 800px;
+    height: 180px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform : translate(-50%, -50%);
+    
 }
-.year , .month,.hour,.date,.minute{
-    height: 10vh;
-    width: 10vh;
-    border: 1px solid black;
+.clock{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient rgba(235,0,255, 0.22);
+    border-radius: 10px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(30px);
+    font-size: 48px;
+    font-weight: 400px;
+   
 }
+.container::before{
+    content: '';
+    width: 180px;
+    height: 180px;
+    border-radius: 5px;
+    background-color: rgba(37, 191, 17, 0.766);
+    top: -50px;
+    left :  -50px;
+    position: absolute;
+    z-index: -1;
 
- 
+}
+.container::after{
+    content: '';
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: rgba(65, 8, 235, 0.896);
+    right: -30px;
+    bottom :  -50px;
+    position: absolute;
+    z-index: -1;
+
+}
+.clock span{
+    font-size: 80px;
+    width: 110px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+
+}
+.clock span::after{
+    
+    font-size: 16px;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+#Hour::after{
+    content: 'Hour';
+}
+#Min::after{
+    content: 'Minute';
+}#Sec::after{
+    content: 'Sec';
+}
+.hero h1{
+    text-align: center;
+    position: absolute;
+    margin-top: 90px;
+    margin-left: 41%;
+    font-size: 46px;
+}

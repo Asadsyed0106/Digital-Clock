@@ -1,15 +1,14 @@
- let  x = new Date();
+ 
 
-let  year = x.getFullYear();
-let  month =  x.getMonth();
-let  hour =  x.getHours();
-let  date  = x.getDate();
-let  day =  x.getDay();
-let   minute = x.getMinutes();
+ 
+ setInterval(()=>{
+    let hour = document.querySelector("#Hour") 
+ let mintue = document.querySelector("#Min") 
+ let Second = document.querySelector("#Sec") 
+    let  currentDate = new Date();
+  hour.innerHTML  = (currentDate.getHours()<10?"0":"") + currentDate.getHours(); 
+  mintue.innerHTML  =(currentDate.getMinutes()<10?"0":"") + currentDate.getMinutes(); 
+  Second.innerHTML  = (currentDate.getSeconds()<10?"0":"") + currentDate.getSeconds(); 
+    
+ },1000)
 
-document.querySelector(".year").innerText = year;
-document.querySelector(".month").innerText = month;
-document.querySelector(".hour").innerText = hour;
-document.querySelector(".date").innerText = date;
-
-document.querySelector(".minute").innerText = minute;
